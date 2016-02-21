@@ -41,6 +41,7 @@ exports.config = {
     watched: [
       "web/static",
       "test/static"
+      "web/elm/SeatSaver.elm"
     ],
 
     // Where to compile files to
@@ -53,6 +54,9 @@ exports.config = {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]
     }
+    elmBrunch: 'web/elm',
+    mainModules: ['SeatSaver.elm'],
+    outputFolder: '../static/vendor'
   },
 
   modules: {
