@@ -19,3 +19,12 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+/*
+	This grabs the div we just set up by its ID and then calls Elm.embed
+	passing in the name of our module Elm.SeatSaver and the div that we just captured
+	
+	Really isn't my style. Gonna stick to elm consuming the Json if possible.
+*/
+var elmDiv = document.getElementById('elm-main')
+  , elmApp = Elm.embed(Elm.SeatSaver, elmDiv);
